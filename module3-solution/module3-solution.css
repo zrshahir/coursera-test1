@@ -1,6 +1,9 @@
 .navbar-brand {
 text-align: left;
 }
+body {
+    overflow-y: auto;
+}
 .dropdown {
     position: relative;
 }
