@@ -1,6 +1,18 @@
 // STEP 2: Wrap the entire contents of SpeakHello.js inside of an IIFE
 // See Lecture 52, part 2
-
+(function() {
+var speakWord = ["Hello"];
+var helloSpeaker = ["name"];
+function speak(name) {
+    console.log(helloSpeaker + " " + name);
+}
+function helloSpeaker() {
+    var_this = this;
+    something.on("click", function() {
+        console.log(_this);
+    });
+};
+}
 
 // STEP 3: Create an object, called 'helloSpeaker' to which you will attach
 // the "speak" method and which you will expose to the global context
@@ -9,12 +21,13 @@
 
 // DO NOT attach the speakWord variable to the 'helloSpeaker' object.
 var speakWord = "Hello";
+var helloSpeaker = "name";
 
 // STEP 4: Rewrite the 'speak' function such that it is attached to the
 // helloSpeaker object instead of being a standalone function.
 // See Lecture 52, part 2
 function speak(name) {
-  console.log(speakWord + " " + name);
+  console.log(helloSpeaker + " " + name);
 }
 
 // STEP 5: Expose the 'helloSpeaker' object to the global scope. Name it
@@ -22,3 +35,9 @@ function speak(name) {
 // See Lecture 52, part 2
 // (Note, Step 6 will be done in the SpeakGoodBye.js file.)
 // xxxx.xxxx = helloSpeaker;
+function helloSpeaker() {
+    var _this = this;
+    something.on("click", function() {
+        console.log(_this);
+});
+};
