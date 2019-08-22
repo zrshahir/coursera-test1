@@ -1,18 +1,65 @@
 // STEP 2: Wrap the entire contents of SpeakHello.js inside of an IIFE
 // See Lecture 52, part 2
-(function() {
-var speakWord = ["Hello"];
-var helloSpeaker = ["name"];
-function speak(name) {
-    console.log(helloSpeaker + " " + name);
+var yaakovGreeter = {};
+yaakovGreeter.name = "Yaakov";
+yaakovGreeter.sayHello = function() {
+    console.log("Hello " + yaakovGreeter.name);
 }
-function helloSpeaker() {
-    var_this = this;
-    something.on("click", function() {
-        console.log(_this);
-    });
-};
+var johnGreeter = {};
+johnGreeter.name = "John";
+johnGreeter.sayGoodBye = function() {
+    console.log("Good Bye " + johnGreeter.name);
 }
+var jenGreeter = {};
+jenGreeter.name = "Jen";
+jenGreeter.sayGoodBye = function() {
+    console.log("Good Bye " + jenGreeter.name);
+}
+var jasonGreeter = {};
+jasonGreeter.name = "Jason";
+jasonGreeter.sayGoodBye = function() {
+    console.log("Good Bye " + jasonGreeter.name);
+}
+var paulGreeter = {};
+paulGreeter.name = "Paul";
+paulGreeter.sayHello = function() {
+    console.log("Hello " + paulGreeter.name);
+}
+var frankGreeter = {};
+frankGreeter.name = "Frank";
+frankGreeter.sayHello = function() {
+    console.log("Hello " + frankGreeter.name);
+}
+var larryGreeter = {};
+larryGreeter.name = "Larry";
+larryGreeter.sayHello = function() {
+    console.log("Hello " + larryGreeter.name);
+}
+var paulaGreeter = {};
+paulaGreeter.name = "Paula";
+paulaGreeter.sayHello = function() {
+    console.log("Hello " + paulaGreeter.name);
+}
+var lauraGreeter = {};
+lauraGreeter.name = "Laura";
+lauraGreeter.sayHello = function() {
+    console.log("Hello " + lauraGreeter.name);
+}
+var jimGreeter = {};
+jimGreeter.name = "Jim";
+jimGreeter.sayGoodBye = function() {
+    console.log("Hello " + jimGreeter.name);
+}
+yaakovGreeter.sayHello();
+johnGreeter.sayGoodBye();
+jenGreeter.sayGoodBye();
+jasonGreeter.sayGoodBye();
+paulGreeter.sayHello();
+frankGreeter.sayHello();
+larryGreeter.sayHello();
+paulaGreeter.sayHello();
+lauraGreeter.sayHello();
+jimGreeter.sayGoodBye();
 
 // STEP 3: Create an object, called 'helloSpeaker' to which you will attach
 // the "speak" method and which you will expose to the global context
