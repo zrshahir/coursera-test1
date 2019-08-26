@@ -85,16 +85,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
       showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  buildAndShowHomeHTML(allCategoriesUrl, categoriesTitleHtml, categoryHtml, menuItemsUrl, menuItemsTitleHtml, menuItemsHtml) {(
-  var request = getRequestObject();
-  request.onreadystatechange =
-  function() {
-      handleResponse(requestUrl, allCategoriesUrl, categoriesTitleHtml, categoryHtml, menuItemsUrl, menuItemsTitleHtml, menuItemsHtml);
-  }
-  request.open("GET", requestUrl, true);
-  request.send(null); // for POST only
-  
-      (true);
+function (homeHtml) {
+    var chosenCategoryShortName = 
+    chooseRandomCategory(categories).short_name;
+  true);
   )}; // Explicitely setting the flag to get JSON from server processed into an object literal
 );
 // *** finish **
@@ -102,9 +96,12 @@ $ajaxUtils.sendGetRequest(
 
 // Builds HTML for the home page based on categories array
 // returned from the server.
-
+function buildAndShowHomeHTML (categories) {
 
   // Load home snippet page
+    $ajaxUtils.sendGetRequest(
+    homeHtmlUrl,
+    function(homeHtml) {
   
 
 // Load home snippet page
